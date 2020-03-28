@@ -8,7 +8,6 @@ function resetPage(){
 }
 function tick(){
 	let timeDisplay=document.getElementById("time");
-	
 	let min=Math.floor(mySeconds/60);
 	let sec=mySeconds-(min*60);
 	
@@ -32,11 +31,11 @@ function tick(){
 function startCounter(){
 	let myInput=document.getElementById("minutes").value;
 	if (isNaN(myInput)){
-		alert("Type a valid number please");
+		alert("Type a valid number please"); // sends message if user inputs a string
 		return;
 	}
-	mySeconds=myInput; // if multiplied by 60 it will give minutes
-	
+    mySeconds=myInput; // if multiplied by 60 it will give minutes
+    
 	intervalHandle=setInterval(tick, 1000); // one second
 	
 	document.getElementById("inputArea").style.display="none";		
